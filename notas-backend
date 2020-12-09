@@ -1,0 +1,18 @@
+package.json
+
+    express - Framework de node
+    mongose - Módulo de conexión con bd Mongose
+    morgan - Middleware de Express (visualización de peticiones)
+    multer - Facilita la subida de imagenes
+    dotenv - Manejo de variables de entorno
+    cross-env - Definición de entorno de trabajo
+    Cors - Módulo que permite peticiones cross-siting
+    fs-extra - Permite trabajar con archivos del sistema y soporta promesas
+    nodemon - Escucha los cambios en el código del servidor
+
+Carpeta backend
+
+    routes - Definición de rutas del servidor
+    models - Definición de modelos de datos a guardar (Tablas en SQL)
+
+.env - Declaración de variables de entorno

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript FullStack</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="../frontend/styles/bootstrap.min.css">
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand">Aplicación Libros</a>
+        </div>
+    </nav>
+    <div class="container p-4">
+        <div class="row">
+            <div class="col-md-4">
+                <form action="" id="book-form" class="card card-body">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="title" placeholder="Titulo del libro" autofocus>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="author" placeholder="Autor">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="genero" placeholder="Genero">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="custom-file">
+                            <label for="image" class="custom-file-label">Sube una imagen</label>
+                            <input type="file" id="image" class="custom-file-input">
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Guardar</button>
+                </form>
+            </div>
+            <div class="col-md-8" id="books-cards">
+                <div class="col-md-8" id="modal"></div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
+</body>
+</html>

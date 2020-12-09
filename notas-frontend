@@ -1,0 +1,16 @@
+package.json
+
+    webpack: Empaquetador de módulos. Prepara los archivos para producción (subida a internet)
+    webpack-cli: Complemento de webpack
+    html-webpack-plugin: Manejo de los archivos HTML en el desarrollo frontend
+    css-loader: Carga archivos css en json
+    style-loader: Permite el uso de css-loader
+    mini-css-extract-plugin: Minificy código css
+    webpack-dev-server: Permite trabajar en desarrollo
+    timeago.js: Muestra las fechas según el tiempo pasado desde la modificación (ej: 2min ago)
+
+Carpeta frontend
+
+    models: Definición de modelos
+    services: Creación de la clase de interacción con API
+    UI.js: Clase de interacción con DOM
