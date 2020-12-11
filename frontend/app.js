@@ -1,20 +1,23 @@
+import 'bootstrap';
 import './styles/app.css';
 import './styles/bootstrap.min.css';
 import UI from './UI'
 const ui = new UI();
 
-const formulario = document.querySelector('#book-form');
-
-const mostrar = document.addEventListener('DOMContentLoaded', ()=>{
+//GET
+$(function(){
     ui.renderBooks(); 
 })
 
-const agregar = formulario.addEventListener('submit', e =>{
+//POST
+const formulario = document.querySelector('#book-form');
+formulario.addEventListener('submit', e =>{
     e.preventDefault();
     const title = document.querySelector('#title').value;
     const author = document.querySelector('#author').value;
     const genero = document.querySelector('#genero').value;
     const image = document.querySelector('#image').files;
+    console.log(image)
 
     const book = new FormData();
     book.append('title', title);
@@ -26,31 +29,41 @@ const agregar = formulario.addEventListener('submit', e =>{
     ui.renderMessage('Libro agregado', 'success', 2000);
 })
 
-/* const editar = document.querySelector('#books-cards').addEventListener('click', e=>{
-    if(e.target.classList.contains('edit')){
-        e.preventDefault();
-        
-        const bookId = e.target.getAttribute('_id');
-        const title = document.querySelector('#title').value;
-        const author = document.querySelector('#author').value;
-        const genero = document.querySelector('#genero').value;
-        const image = document.querySelector('#image').files;
+//PUT
+    //$(function(){
+        $('#books-cards').on('click', '#editModal #edit', function(e){
+            e.preventDefault();
+            var image;
+            $('#books-cads').on('click', 'input[type="file"]', function(e){
+                $('#books-cards').on('change', 'input[type="file"]', function(){
+                    image = $(this).files;
+                    return image
+                })
+            })
+                
+            console.log(image)
 
-        const book = new FormData();
-        book.append('title', title);
-        book.append('author', author);
-        book.append('genero', genero);
-        book.append('image', image[0]);
+            const bookId = e.target.getAttribute('_id');
+            console.log(bookId)
+            const title = $('#editModal #edit-title').val();
+            console.log(title)
+            const author = $('#editModal #edit-author').val();
+            const genero = $('#editModal #edit-genero').val();
+            /* const image = $('#editModal #edit-image').files; */
+            console.log(image[0])
 
-        document.addEventListener('DOMContentLoaded', ()=>{
-            ui.renderEdit(book); 
+            const book = new FormData();
+            book.append('title', title);
+            book.append('author', author);
+            book.append('genero', genero);
+            book.append('image', image);
+    
+            ui.editBook(bookId, book);
+            ui.renderMessage('Libro editado', 'success', 2000);
         })
-        ui.editBook(bookId, book);
-        ui.renderMessage('Libro editado', 'success', 2000);
-    }
-}) */
-
-const eliminar = document.querySelector('#books-cards').addEventListener('click', e=>{
+    //})
+//DELETE
+document.querySelector('#books-cards').addEventListener('click', e => {
     if(e.target.classList.contains('delete')){
         e.preventDefault();
         const bookId = e.target.getAttribute('_id');
