@@ -29,7 +29,7 @@ class UI {
                                     <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                                         <div class="modal-dialog">
                                             <div class="modal-content">
-                                                <form action="" id="edit-book-form" class="card card-body" name="edit-book-form">
+                                                <form action="" id="edit-book-form" class="card card-body" name="edit-book-form" enctype="multipart/form-data">
                                                     <div class="modal-body">
                                                         <div class="form-group">
                                                             <input type="text" class="form-control title" id="edit-title" value="${book.title}">
