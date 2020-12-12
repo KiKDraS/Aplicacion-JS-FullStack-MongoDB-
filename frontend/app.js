@@ -32,15 +32,15 @@ formulario.addEventListener('submit', e =>{
 //PUT
     //$(function(){
         $('#books-cards').on('click', '#editModal #edit', function(e){
-            e.preventDefault();
+            e.preventDefault();          
+        
             var image;
-            $('#books-cads').on('click', 'input[type="file"]', function(e){
-                $('#books-cards').on('change', 'input[type="file"]', function(){
-                    image = $(this).files;
-                    return image
-                })
+            $('#books-cards').off('click', '#editModal #edit-image')    
+            $('#books-cards').on('change', '#editModal #edit-image', function(){
+                image = $(this).files;
+                return image
             })
-                
+            
             console.log(image)
 
             const bookId = e.target.getAttribute('_id');
@@ -49,8 +49,6 @@ formulario.addEventListener('submit', e =>{
             console.log(title)
             const author = $('#editModal #edit-author').val();
             const genero = $('#editModal #edit-genero').val();
-            /* const image = $('#editModal #edit-image').files; */
-            console.log(image[0])
 
             const book = new FormData();
             book.append('title', title);

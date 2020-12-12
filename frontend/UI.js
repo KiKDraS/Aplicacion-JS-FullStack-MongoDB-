@@ -43,7 +43,7 @@ class UI {
                                                         <div class="input-group mb-3">
                                                             <div class="custom-file">
                                                                 <label for="image" class="custom-file-label">Sube una imagen</label>
-                                                                <input type="file" id="edit-image" class="custom-file-input" ${book.onchange}>
+                                                                <input type="file" id="edit-image" class="custom-file-input">
                                                             </div>
                                                         </div>
                                                     </div>
