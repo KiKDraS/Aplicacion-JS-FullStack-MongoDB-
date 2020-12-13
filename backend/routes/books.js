@@ -13,9 +13,9 @@ const path = require('path');
     }); 
 
     //POST
-    router.post('/', async (req, res) =>{
+    router.post('/', async (req, res) =>{ 
         const {title, author, genero} = req.body;
-        const imagePath = `/uploads/${req.file.filename}`;
+        const imagePath = `/uploads/${req.file.filename}` || '/uploads/unnamed.jpg' ;
         const newBook = new Book({title, author, genero, imagePath});
         await newBook.save();
         res.json({mensaje: 'Libro guardado'})
