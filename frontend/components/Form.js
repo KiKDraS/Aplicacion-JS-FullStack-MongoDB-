@@ -17,7 +17,7 @@ class Form{
                 </div>
                 <div class="input-group mb-3">
                     <div class="custom-file">
-                        <label for="image" class="custom-file-label">Sube una imagen</label>
+                        <label for="image" class="custom-file-label">Subir imagen</label>
                         <input type="file" id="image" class="custom-file-input">
                     </div>
                 </div>

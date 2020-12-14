@@ -16,9 +16,6 @@ class Peticiones{
 
         $('#formulario').on('click', '#send', function(e){
             e.preventDefault();
-            if(image.image == undefined){
-                image.image = 'localhost:8080/styles/img/unnamed.jpg'
-            }
             
             const title = $('#title').val();
             const author = $('#author').val();

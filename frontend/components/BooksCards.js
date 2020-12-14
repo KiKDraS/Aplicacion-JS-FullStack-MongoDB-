@@ -45,7 +45,7 @@ class BooksCards {
                                                                 <img src="http://localhost:3000${book.imagePath}" class="img-fluid img-thumbnail w-75" />
                                                             </div>
                                                             <div class="custom-file align-middle">
-                                                                <label for="image" class="custom-file-label">Sube una imagen</label>
+                                                                <label for="image" class="custom-file-label">Subir imagen</label>
                                                                 <input type="file" id="edit-image" class="custom-file-input">
                                                                 <div class="modal-footer">
                                                             </div>
