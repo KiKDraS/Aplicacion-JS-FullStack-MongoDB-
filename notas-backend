@@ -9,6 +9,8 @@ package.json
     Cors - Módulo que permite peticiones cross-siting
     fs-extra - Permite trabajar con archivos del sistema y soporta promesas
     nodemon - Escucha los cambios en el código del servidor
+    url-loader|css-loader - Dependencias webpack
+    webpack-icons-installer - Permite el uso de icons de font-awesome, bootstrap-glyphicon y material-design-icons
 
 Carpeta backend
 

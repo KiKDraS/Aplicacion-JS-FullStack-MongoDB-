@@ -25,6 +25,15 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: 'babel-loader'
+            },
+            {
+                test: /\.(woff(2)?|ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+                loader: 'url-loader',
+                options: {
+                  limit: 8192,
+                  name:'[name].[ext]',
+                  outputPath:'assets'
+                }
             }
         ]
     },

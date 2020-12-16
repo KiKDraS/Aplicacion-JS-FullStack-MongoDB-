@@ -14,8 +14,14 @@ const path = require('path');
 
     //POST
     router.post('/', async (req, res) =>{ 
-        const {title, author, genero} = req.body;
-        const imagePath = `/uploads/${req.file.filename}`;
+        const {title, author, genero, imageDefault} = req.body;
+        //Seteo de imagen por defecto
+        let imagePath = '';
+        if(req.body.image == undefined){
+            imagePath = `/uploads/${req.file.filename}`;
+        }else{
+            imagePath = imageDefault;
+        }
         const newBook = new Book({title, author, genero, imagePath});
         await newBook.save();
         res.json({mensaje: 'Libro guardado'})
@@ -23,9 +29,15 @@ const path = require('path');
 
     //PUT
     router.put('/:id', async (req, res) =>{
-        const {title, author, genero} = req.body;
-        const imagePath = `/uploads/${req.file.filename}`;
-        await Book.findByIdAndUpdate(req.params.id, {$set: {title, author, genero, imagePath}}, {new: true});
+        const {title, author, genero, created_at, thumbnail} = req.body;
+        //Seteo de imagen por defecto
+        let imagePath;
+        if(req.file.filename == undefined){
+            imagePath = thumbnail;
+        }else{
+            imagePath = `/uploads/${req.file.filename}`;
+        }  
+        await Book.findByIdAndUpdate(req.params.id, {$set: {title, author, genero, imagePath, created_at}}, {new: true});
         res.json({mensaje: 'Libro actualizado'})
     })
 
